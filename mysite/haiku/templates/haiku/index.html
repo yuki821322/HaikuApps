@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>5・7・5 季語アプリ</title>
+    <link rel="stylesheet" href="{% static 'haiku/style.css' %}">
+</head>
+
+<body>
+    <main class="card">
+        <h1>今日のお題</h1>
+        <p class="kigo">
+            {{ kigo.word }}
+            <span class="kigo-meta">{{ kigo.get_season_display }}・{{ kigo.get_genre_display }}</span>
+        </p>
+
+        <a class="button button-secondary" href="{% url 'index' %}">お題を出す</a>
+
+        <form method="post" class="haiku-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="hidden" name="kigo_id" value="{{ kigo.pk }}">
+            <button type="submit" class="button">投稿する</button>
+        </form>
+
+    </main>
+</body>
+
+</html>
