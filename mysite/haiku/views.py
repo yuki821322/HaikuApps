@@ -1,5 +1,5 @@
 import random
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Kigo
 from .forms import HaikuForm
 
@@ -11,6 +11,7 @@ def index(request):
       haiku = form.save(commit=False)
       haiku.kigo = kigo
       haiku.save()
+      return redirect("index")
   else:
     kigo = random.choice(list(Kigo.objects.all()))
     form = HaikuForm()
