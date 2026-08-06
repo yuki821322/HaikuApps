@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>みんなの五七五</title>
+    <link rel="stylesheet" href="{% static 'haiku/style.css' %}">
+</head>
+
+<body>
+    <main class="card card-wide">
+        <h1>みんなの五七五</h1>
+        <a class="button button-secondary" href="{% url 'index' %}">お題に戻る</a>
+
+        <section class="ranking">
+            <h2>なりきりポイント ランキング</h2>
+            <ol class="ranking-list">
+                {% for row in rankings %}
+                <li>
+                    <span class="ranking-name">{{ row.author_name }}</span>
+                    <span class="ranking-points">{{ row.points }}pt</span>
+                </li>
+                {% empty %}
+                <li class="empty">まだ投稿がありません</li>
+                {% endfor %}
+            </ol>
+        </section>
+
+        <ul class="haiku-list">
+            {% for haiku in haikus %}
+            <li>
+                <p class="haiku-text">{{ haiku.text }}</p>
+                <p class="kigo-meta">
+                    季語：{{ haiku.kigo.word }}（{{ haiku.kigo.get_season_display }}）／{{ haiku.author_name }}
+                </p>
+                <a class="share-link" href="{% url 'haiku_detail' haiku.pk %}">共有用リンク</a>
+            </li>
+            {% empty %}
+            <li class="empty">まだ投稿がありません</li>
+            {% endfor %}
+        </ul>
+    </main>
+</body>
+
+</html>
