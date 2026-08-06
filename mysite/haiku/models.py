@@ -22,3 +22,12 @@ class Kigo(models.Model):
 
   def __str__(self):
     return self.word
+
+class Haiku(models.Model):
+  kigo = models.ForeignKey(Kigo, on_delete=models.PROTECT, verbose_name="季語")
+  text = models.TextField(verbose_name="五七五")
+  author_name = models.CharField(max_length=20, verbose_name="投稿者")
+  created_at = models.DateTimeField(auto_now_add=True, verbose_name="投稿日時")
+
+  def __str__(self):
+    return self.text
