@@ -1,0 +1,38 @@
+[
+{
+  "model": "haiku.kigo",
+  "pk": 1,
+  "fields": {
+    "word": "春日和",
+    "season": "spring",
+    "genre": "plant"
+  }
+},
+{
+  "model": "haiku.kigo",
+  "pk": 2,
+  "fields": {
+    "word": "浴衣",
+    "season": "summer",
+    "genre": "animal"
+  }
+},
+{
+  "model": "haiku.kigo",
+  "pk": 3,
+  "fields": {
+    "word": "もみじ",
+    "season": "autumn",
+    "genre": "event"
+  }
+},
+{
+  "model": "haiku.kigo",
+  "pk": 4,
+  "fields": {
+    "word": "雪",
+    "season": "winter",
+    "genre": "weather"
+  }
+}
+]
