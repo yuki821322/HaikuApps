@@ -1,0 +1,37 @@
+[
+{
+  "model": "haiku.muchaburi",
+  "pk": 1,
+  "fields": {
+    "text": "ギャル語で詠む"
+  }
+},
+{
+  "model": "haiku.muchaburi",
+  "pk": 2,
+  "fields": {
+    "text": "ござる口調で詠む"
+  }
+},
+{
+  "model": "haiku.muchaburi",
+  "pk": 3,
+  "fields": {
+    "text": "関西弁で詠む"
+  }
+},
+{
+  "model": "haiku.muchaburi",
+  "pk": 4,
+  "fields": {
+    "text": "超丁寧語で詠む"
+  }
+},
+{
+  "model": "haiku.muchaburi",
+  "pk": 5,
+  "fields": {
+    "text": "忍者っぽく詠む"
+  }
+}
+]

@@ -48,6 +48,17 @@ h1{
     color: var(--ink-soft);
     font-weight: 400;
 }
+.muchaburi{
+    display: inline-block;
+    margin: 0 0 20px;
+    padding: 6px 12px;
+    background: var(--accent-2);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 999px;
+    transform: rotate(-2deg);
+}
 .button{
     display: inline-block;
     border: none;
@@ -86,4 +97,74 @@ h1{
     background: var(--accent-2);
     color: #fff;
     width: 100%;
+}
+.text-link{
+    display: block;
+    margin-top: 16px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--ink-soft);
+}
+.card-wide{
+    max-width: 560px;
+}
+.ranking{
+    margin: 8px 0 28px;
+    padding: 16px;
+    background: var(--paper);
+    border-radius: 8px;
+}
+.ranking h2{
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: var(--ink-soft);
+    font-weight: 500;
+}
+.ranking-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.ranking-list li{
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    font-size: 14px;
+}
+.ranking-points{
+    color: var(--accent-2);
+    font-weight: 700;
+}
+.haiku-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.haiku-list li{
+    border-top: 1px solid var(--line);
+    padding: 16px 0;
+}
+.haiku-list li:first-child{
+    border-top: none;
+}
+.haiku-text{
+    margin: 0 0 6px;
+    font-size: 20px;
+    white-space: pre-line;
+}
+.haiku-text-large{
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+.share-link{
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 13px;
+    color: var(--accent);
+}
+.empty{
+    color: var(--ink-soft);
+    font-size: 14px;
+    text-align: center;
+    padding: 12px 0;
 }
