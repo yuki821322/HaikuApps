@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ haiku.text }} ｜ 5・7・5 季語アプリ</title>
+    <link rel="stylesheet" href="{% static 'haiku/style.css' %}">
+</head>
+
+<body>
+    <main class="card">
+        <h1>共有された五七五</h1>
+        <p class="haiku-text haiku-text-large">{{ haiku.text }}</p>
+        <p class="kigo-meta">
+            季語：{{ haiku.kigo.word }}（{{ haiku.kigo.get_season_display }}・{{ haiku.kigo.get_genre_display }}）
+        </p>
+        <p class="kigo-meta">投稿者：{{ haiku.author_name }}（なりきりポイント {{ points }}pt）</p>
+
+        <a class="button button-secondary" href="{% url 'haiku_list' %}">一覧へ戻る</a>
+        <a class="button" href="{% url 'index' %}">自分も詠む</a>
+    </main>
+</body>
+
+</html>

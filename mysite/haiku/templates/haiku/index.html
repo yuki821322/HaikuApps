@@ -16,15 +16,21 @@
             <span class="kigo-meta">{{ kigo.get_season_display }}・{{ kigo.get_genre_display }}</span>
         </p>
 
+        {% if muchaburi %}
+        <p class="muchaburi">無茶ぶり：{{ muchaburi.text }}</p>
+        {% endif %}
+
         <a class="button button-secondary" href="{% url 'index' %}">お題を出す</a>
 
         <form method="post" class="haiku-form">
             {% csrf_token %}
             {{ form.as_p }}
             <input type="hidden" name="kigo_id" value="{{ kigo.pk }}">
+            <input type="hidden" name="muchaburi_id" value="{{ muchaburi.pk|default:'' }}">
             <button type="submit" class="button">投稿する</button>
         </form>
 
+        <a class="text-link" href="{% url 'haiku_list' %}">みんなの投稿を見る</a>
     </main>
 </body>
 

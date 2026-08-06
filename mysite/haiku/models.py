@@ -31,3 +31,10 @@ class Haiku(models.Model):
 
   def __str__(self):
     return self.text
+
+
+class Muchaburi(models.Model):
+  text = models.CharField(max_length=50, verbose_name="無茶ぶり")
+
+  def __str__(self):
+    return self.text
